@@ -24,8 +24,8 @@ class ViewController: UIViewController {
 
      let randNum = CGFloat.random(in: 0...1)
     
-       let myColor = UIColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
-    
+//       let myColor = UIColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+//
    
     
     @IBAction func guessedColor(_ sender: UIButton) {
@@ -45,6 +45,11 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func newGame(_ sender: UIButton) {
+        randomColor.backgroundColor = .black
+    }
+    
     
 }
 
