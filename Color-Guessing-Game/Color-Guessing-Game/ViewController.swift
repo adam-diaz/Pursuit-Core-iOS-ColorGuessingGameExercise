@@ -75,12 +75,13 @@ class ViewController: UIViewController {
                randomColor()
                 score += 1
                 scoreKeeper.text = "Score: \(score)"
-                if score > highScore {
+                if score >= highScore {
+                    highScore = score
                     highScoreKeeper.text = "High Score: \(highScore)"
                 }
             }
                 
-                sender.isEnabled = false
+//                sender.isEnabled = false
             
             
         case 1:
@@ -89,11 +90,12 @@ class ViewController: UIViewController {
                 score += 1
                 scoreKeeper.text = "Score: \(score)"
                 if score > highScore {
+                    highScore = score
                 highScoreKeeper.text = "High Score: \(highScore)"
             }
             }
                
-            sender.isEnabled = false
+//            sender.isEnabled = false
             
             
          case 2:
@@ -102,11 +104,12 @@ class ViewController: UIViewController {
                 score += 1
                 scoreKeeper.text = "Score: \(score)"
                 if score > highScore {
+                    highScore = score
                 highScoreKeeper.text = "High Score: \(highScore)"
                 
             }
                 
-                sender.isEnabled = false
+//                sender.isEnabled = false
             
             }
          default:
@@ -119,7 +122,8 @@ class ViewController: UIViewController {
     @IBAction func newGame(_ sender: UIButton) {
        
         randomColor()
-        
+        score = 0
+        scoreKeeper.text = "Score: \(score)"
 //        print(myColor)
     }
 
