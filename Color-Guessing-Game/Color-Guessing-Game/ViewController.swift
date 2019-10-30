@@ -11,45 +11,73 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var randomColor: UIView!
+    @IBOutlet weak var displayView: UIView!
     
 //    let color = randomColor.
+    
+    
+     let randNum = CGFloat.random(in: 0...1)
+     // three random numbers for the rgb
+     
+    var randomRed: CGFloat = 0
+    var randomGreen: CGFloat = 0
+    var randomBlue: CGFloat = 0
+
+     
+
+     
+     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+       
+        //randomColor.backgroundColor = .magenta
+        
+        // TODO: write a function called randomColor
+        
+        randomColor()
+        
+        
+
+        
     }
 
+    func randomColor() {
+        randomRed = CGFloat.random(in: 0...1)
+        randomGreen = CGFloat.random(in: 0...1)
+        randomBlue = CGFloat.random(in: 0...1)
+        displayView.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1)
+    }
     
-    
-    // will be used for enabling and disabling game
+    // the code below will be used for enabling and disabling game (do not FORGET)
     
     @IBOutlet weak var red: UIButton!
     @IBOutlet weak var blue: UIButton!
     @IBOutlet weak var green: UIButton!
     
-
-    let randNum = CGFloat.random(in: 0...1)
-    // three random numbers for the rgb
-    
-    let myColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
-
-   
+    let rgbRed = UIColor.red
+    let rgbGreen = UIColor.green
+    let rgbBlue = UIColor.blue
     
     @IBAction func guessedColor(_ sender: UIButton) {
-         
-        randomColor.backgroundColor = myColor
-  
+
+
+        
         switch sender.tag {
         case 0:
-            randomColor.backgroundColor = .red
+            
+            if rgbGreen == rgbBlue {
+                print("red")
+            }
+            
         case 1:
-            randomColor.backgroundColor =
+            displayView.backgroundColor =
             .blue
         case 2:
-            randomColor.backgroundColor = .green
+            displayView.backgroundColor = .green
         default:
-            randomColor.backgroundColor = .black
+            displayView.backgroundColor = .black
         }
         
     }
@@ -60,7 +88,7 @@ class ViewController: UIViewController {
         
             CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
         
-        randomColor.backgroundColor = myColor
+        displayView.backgroundColor = myColor
         
 //        print(myColor)
     }
