@@ -15,23 +15,31 @@ class ViewController: UIViewController {
     
 //    let color = randomColor.
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-     let randNum = CGFloat.random(in: 0...1)
     
-//       let myColor = UIColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
-//
+    
+    // will be used for enabling and disabling game
+    
+    @IBOutlet weak var red: UIButton!
+    @IBOutlet weak var blue: UIButton!
+    @IBOutlet weak var green: UIButton!
+    
+
+    let randNum = CGFloat.random(in: 0...1)
+    // three random numbers for the rgb
+    
+    let myColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
+
    
     
     @IBAction func guessedColor(_ sender: UIButton) {
-        
- 
-        
+         
+        randomColor.backgroundColor = myColor
+  
         switch sender.tag {
         case 0:
             randomColor.backgroundColor = .red
@@ -47,10 +55,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newGame(_ sender: UIButton) {
-        randomColor.backgroundColor = .black
+       
+        let myColor = UIColor(red: CGFloat.random(in: 0...1), green:
+        
+            CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
+        
+        randomColor.backgroundColor = myColor
+        
+//        print(myColor)
     }
     
     
 }
 
 //randomColor.backgroundColor = .red
+// .max states whatever number or color is used the most

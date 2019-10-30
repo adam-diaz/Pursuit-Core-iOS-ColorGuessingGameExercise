@@ -65,7 +65,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="blue" destination="qv8-0i-hSl" id="xdC-4m-Br3"/>
+                        <outlet property="green" destination="Bhe-tA-LoS" id="n0H-y5-pEb"/>
                         <outlet property="randomColor" destination="xDN-CV-SkS" id="7U5-QJ-eZG"/>
+                        <outlet property="red" destination="w85-kM-R5f" id="Nvj-9s-UX4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
