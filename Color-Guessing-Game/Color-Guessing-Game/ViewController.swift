@@ -147,6 +147,8 @@ class ViewController: UIViewController {
         randomColor()
         score = 0
         scoreKeeper.text = "Score: \(score)"
+        [red, blue, green].forEach({$0?.isEnabled = true})
+        pickLabel.text = "Pick A Color"
 //        print(myColor)
     }
 
