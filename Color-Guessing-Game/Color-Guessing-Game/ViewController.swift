@@ -19,6 +19,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var pickLabel: UILabel!
     
+    @IBOutlet weak var red: UIButton!
+    
+    @IBOutlet weak var blue: UIButton!
+    
+    @IBOutlet weak var green: UIButton!
+    
+
+    
     //    let color = randomColor.
     // score.increment() += 1
     
@@ -82,9 +90,12 @@ class ViewController: UIViewController {
                     highScoreKeeper.text = "High Score: \(highScore)"
                 }
             } else {
-                pickLabel.text = "Wrong! Tap, New Game."
+              pickLabel.text = "Wrong! Tap, New Game."
+                
+                [red, blue, green].forEach({$0?.isEnabled = false})
             }
                 
+            
 //                sender.isEnabled = false
             
             
@@ -99,8 +110,10 @@ class ViewController: UIViewController {
             }
             } else {
                 pickLabel.text = "Wrong! Tap, New Game."
+                [red, blue, green].forEach({$0?.isEnabled = false})
             }
                
+            
 //            sender.isEnabled = false
             
             
@@ -118,7 +131,10 @@ class ViewController: UIViewController {
             
             } else {
                 pickLabel.text = "Wrong! Tap, New Game."
+                [red, blue, green].forEach({$0?.isEnabled = false})
             }
+            
+            
          default:
                 
             displayView.backgroundColor = .black

@@ -86,9 +86,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="blue" destination="qv8-0i-hSl" id="wg9-Zx-6Q4"/>
                         <outlet property="displayView" destination="xDN-CV-SkS" id="7U5-QJ-eZG"/>
+                        <outlet property="green" destination="Bhe-tA-LoS" id="IRX-fW-5Iz"/>
                         <outlet property="highScoreKeeper" destination="b9F-4L-4ns" id="tPX-0a-4A7"/>
                         <outlet property="pickLabel" destination="Rdo-C0-UT1" id="YXq-fJ-3W6"/>
+                        <outlet property="red" destination="w85-kM-R5f" id="wyA-5R-wW5"/>
                         <outlet property="scoreKeeper" destination="rZ9-NU-WQi" id="zE1-fI-z9k"/>
                     </connections>
                 </viewController>
