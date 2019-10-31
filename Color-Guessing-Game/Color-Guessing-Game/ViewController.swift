@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var highScoreKeeper: UILabel!
     
+    @IBOutlet weak var pickLabel: UILabel!
+    
     //    let color = randomColor.
     // score.increment() += 1
     
@@ -79,6 +81,8 @@ class ViewController: UIViewController {
                     highScore = score
                     highScoreKeeper.text = "High Score: \(highScore)"
                 }
+            } else {
+                pickLabel.text = "Wrong! Tap, New Game."
             }
                 
 //                sender.isEnabled = false
@@ -93,6 +97,8 @@ class ViewController: UIViewController {
                     highScore = score
                 highScoreKeeper.text = "High Score: \(highScore)"
             }
+            } else {
+                pickLabel.text = "Wrong! Tap, New Game."
             }
                
 //            sender.isEnabled = false
@@ -109,8 +115,9 @@ class ViewController: UIViewController {
                 
             }
                 
-//                sender.isEnabled = false
             
+            } else {
+                pickLabel.text = "Wrong! Tap, New Game."
             }
          default:
                 
